@@ -11,6 +11,9 @@ scaler = joblib.load('scalercasa.bin')
 # Título de la app
 st.title("Predicción de Precio de Casas")
 
+# Mostrar imagen debajo del título
+st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScEz2kb3sQGsAA6czYC5nQ_2VO6wM2HXHUDQkfiA1wvNKqR2obNphc66JuJ5Sbceli2eI&usqp=CAU", use_column_width=True)
+
 # Sidebar para ingresar datos
 st.sidebar.header("Ingresar Datos de la Casa")
 
@@ -41,4 +44,3 @@ precio_predicho = modelo.predict(df_scaled)
 
 # Mostrar el resultado de la predicción
 st.header(f"El precio estimado de la casa es: ${precio_predicho[0]:,.2f}")
-
